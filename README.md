@@ -8,12 +8,21 @@ go get https://github.com/dinaxu-attack/go-safe-encoding
 
 # Usage
 ```
-println("Encoded:")
-enc := safe.Encode("Hello World")
-println(enc)
+package main
 
-println("Decoded:")
-println(safe.Decode(enc))
+import (
+	"github.com/dinaxu-attack/go-safe-encoding"
+)
+
+func main() {
+
+	println("Encoded:")
+	enc := safe.Encode("Hello World")
+	println(enc)
+
+	println("Decoded:")
+	println(safe.Decode(enc))
+}
 ```
 
 Output
