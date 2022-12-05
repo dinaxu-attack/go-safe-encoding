@@ -3,7 +3,7 @@ Custom base64 encoding written in Go. U can decode text only with this library
 
 # Install
 ```
-go get https://github.com/dinaxu-attack/go-safe-encoding
+go get github.com/dinaxu-attack/go-safe-encoding
 ```
 
 # Usage
