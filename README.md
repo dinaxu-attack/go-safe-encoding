@@ -14,8 +14,8 @@ println(enc)
 
 println("Decoded:")
 println(safe.Decode(enc))
-
 ```
+
 Output
 ```
 Encoded:
