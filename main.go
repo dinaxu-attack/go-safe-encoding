@@ -59,7 +59,6 @@ func Encode(str string) string {
 		res += string(sym) + GenerateSym(1)
 	}
 
-	Decode(res)
 	return res
 
 }
