@@ -49,9 +49,7 @@ func Encode(str string) string {
 
 	base := base64.StdEncoding.EncodeToString([]byte(str))
 
-	base = strings.ReplaceAll(base, "=", "")
-
-	rev := Reverse(base[:len(base)/2+5])
+	rev := Reverse(base)
 
 	var res string
 
@@ -59,19 +57,24 @@ func Encode(str string) string {
 		res += string(sym) + GenerateSym(1)
 	}
 
-	return res
+	return "!+" + res + "!+"
 
 }
 
 func Decode(str string) string {
 
 	d := Unreverse(str)
+
 	un := strings.ReplaceAll(d, "-", "")
 	un = strings.ReplaceAll(un, "|", "")
 	un = strings.ReplaceAll(un, "/", "")
 	un = strings.ReplaceAll(un, "#", "")
 	un = strings.ReplaceAll(un, "$", "")
 	un = strings.ReplaceAll(un, "&", "")
+	un = strings.ReplaceAll(un, "!", "")
+	un = strings.ReplaceAll(un, "+", "")
 
-	return un
+	decoded, _ := base64.StdEncoding.DecodeString(un)
+
+	return string(decoded)
 }
