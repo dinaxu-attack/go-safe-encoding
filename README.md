@@ -8,12 +8,12 @@ go get https://github.com/dinaxu-attack/go-safe-encoding
 
 # Usage
 ```
-	println("Encoded:")
-	enc := safe.Encode("Hello World")
-	println(enc)
+println("Encoded:")
+enc := safe.Encode("Hello World")
+println(enc)
 
-	println("Decoded:")
-	println(safe.Decode(enc))
+println("Decoded:")
+println(safe.Decode(enc))
 
 ```
 Output
