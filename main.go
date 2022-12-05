@@ -1,4 +1,4 @@
-package github.com/dinaxu-attack/safe-encoding
+package safe
 
 import (
 	"crypto/rand"
